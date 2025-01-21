@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Interior Decorators</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-[#F8E1B7] text-[#754E1A]">
+
+    <!-- Header Section -->
+    <header class="bg-[#754E1A] text-white py-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4 animate__animated animate__fadeIn">Pranav Interior Decorators</h1>
+            <p class="text-xl mb-8">Transforming spaces with creativity and style</p>
+            <a href="#about" class="bg-[#CBA35C] text-[#754E1A] px-6 py-3 rounded-full text-xl hover:bg-[#B6CBBD] transition-all duration-300">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Image Section -->
+    <section class="py-16 bg-white text-center">
+        <div class="container mx-auto">
+            <img src="https://i.postimg.cc/0NdkjdWw/PRANAV-INTERIORS.png" alt="Pranav Interiors" class="mx-auto rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-[#B6CBBD] text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#754E1A] mb-6">About Us</h2>
+            <p class="text-lg text-[#754E1A] leading-relaxed mb-6">
+                At Pranav Interior Decorators, we believe in creating spaces that reflect your unique style. With over a decade of experience, our expert team of designers transforms spaces into elegant and functional works of art. We specialize in residential and commercial interiors.
+            </p>
+            <p class="text-lg text-[#754E1A] leading-relaxed">
+                Our mission is to provide exceptional design services that exceed client expectations, ensuring satisfaction in every project we undertake.
+            </p>
+        </div>
+    </section>
+
+    <!-- Work Showcase Section -->
+    <section id="work" class="py-16 bg-white fade-in-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold text-[#754E1A] mb-6">Our Work</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
+                    <img src="https://i.postimg.cc/wBFCnW40/Whats-App-Image-2025-01-21-at-21-22-37-ec23cf48.jpg" alt="Interior 1" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
+                    <img src="https://i.postimg.cc/tTTKbhLy/Whats-App-Image-2025-01-21-at-21-22-38-9487fb68.jpg" alt="Interior 2" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
+                    <img src="https://i.postimg.cc/BbPRLJSV/Whats-App-Image-2025-01-21-at-21-22-36-3308a3c2.jpg" alt="Interior 3" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-[#CBA35C] text-white text-center fade-in-up">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-6">Get in Touch</h2>
+            <p class="text-xl mb-8">We’d love to work with you! Reach out to us to start your next project.</p>
+            <a href="mailto:info@pranavinteriors.com" class="bg-[#754E1A] px-6 py-3 rounded-full text-xl hover:bg-[#B6CBBD] transition-all duration-300">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#754E1A] text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Pranav Interior Decorators | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
