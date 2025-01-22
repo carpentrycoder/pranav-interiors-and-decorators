@@ -7,7 +7,26 @@
     <title>Pranav Interior Decorators</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom animation */
+            /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px; /* Width of the scrollbar */
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            background-color: #754e1a; /* Scrollbar thumb color */
+            border-radius: 10px; /* Rounded corners */
+            border: 3px solid #F8E1B7; /* Adds spacing between scrollbar and track */
+        }
+    
+        ::-webkit-scrollbar-track {
+            background-color: #f8e1b729; /* Scrollbar track color */
+            border-radius: 10px;
+        }
+    
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #B6A154; /* Color on hover */
+        }
+
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -31,20 +50,31 @@
 </head>
 
 <body class="font-sans bg-[#F8E1B7] text-[#754E1A]">
-
+<div id="main" data-scroll-container>
     <!-- Header Section -->
-    <header class="bg-[#754E1A] text-white py-12">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4 animate__animated animate__fadeIn">Pranav Interior Decorators</h1>
-            <p class="text-xl mb-8">Transforming spaces with creativity and style</p>
-            <a href="#about" class="bg-[#CBA35C] text-[#754E1A] px-6 py-3 rounded-full text-xl hover:bg-[#B6CBBD] transition-all duration-300">Contact Us</a>
+<!-- Header Section -->
+<header class="bg-[#754E1A] text-white py-3">
+    <div class="container mx-auto flex flex-col items-center text-center md:flex-row md:justify-between md:items-center md:text-left px-4">
+        <!-- Logo -->
+        <div class="mb-1 md:mb-0">
+            <a href="{% url 'index' %}"><img src="https://i.postimg.cc/sgbpMkLX/Black-Yellow-Thin-Interior-Design-Studio-Logo.png" 
+                 alt="Pranav Interior Decorators Logo" 
+                 class="w-36 h-auto md:w-48 lg:w-56"></a>
         </div>
-    </header>
+        <!-- Title and Call to Action -->
+        <div class="my-9 md:ml-2 md:text-left text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-3 animate__animated animate__fadeIn">Pranav Interior Decorators</h1>
+            <p class="text-lg md:text-xl mb-6">Transforming spaces with creativity and style</p>
+            <a href="{% url 'contact' %}" class="bg-[#F5F5DC] font-bold-600 text-black px-6 py-3 rounded-full text-xl hover:bg-[#F8E1B7] transition-all duration-300">Contact Us</a>
+        </div>
+    </div>
+</header>
+
 
     <!-- Image Section -->
     <section class="py-16 bg-white text-center">
         <div class="container mx-auto">
-            <img src="https://i.postimg.cc/0NdkjdWw/PRANAV-INTERIORS.png" alt="Pranav Interiors" class="mx-auto rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="https://i.postimg.cc/vTmJ4x15/PRANAV-INTERIORS-1.png" alt="Pranav Interiors" class="mx-auto rounded-lg shadow-lg hover:scale-105 transition-all duration-300">
         </div>
     </section>
 
@@ -76,6 +106,10 @@
                     <img src="https://i.postimg.cc/BbPRLJSV/Whats-App-Image-2025-01-21-at-21-22-36-3308a3c2.jpg" alt="Interior 3" class="w-full h-full object-cover">
                 </div>
             </div>
+            <a href="{% url 'work' %}">
+            <button class="mt-8 bg-[#754E1A] text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-[#B6CBBD] transition-all duration-300">
+                Show All Work
+            </button></a>
         </div>
     </section>
 
@@ -94,6 +128,8 @@
             <p>&copy; 2025 Pranav Interior Decorators | All Rights Reserved</p>
         </div>
     </footer>
+
+    </div>
 
 </body>
 

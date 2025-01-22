@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pranav Interior Decorators</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        /* Custom Scrollbar */
+             /* Custom Scrollbar */
+             ::-webkit-scrollbar {
+                width: 5px; /* Width of the scrollbar */
+            }
+        
+            ::-webkit-scrollbar-thumb {
+                background-color: #754e1a; /* Scrollbar thumb color */
+                border-radius: 10px; /* Rounded corners */
+                border: 3px solid #F8E1B7; /* Adds spacing between scrollbar and track */
+            }
+        
+            ::-webkit-scrollbar-track {
+                background-color: #f8e1b729; /* Scrollbar track color */
+                border-radius: 10px;
+            }
+        
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: #B6A154; /* Color on hover */
+            }
+
+            /* Ensuring footer stays at the bottom but extends if content increases */
+        .content-wrapper {
+            min-height: 100vh;
+            padding-bottom: 50px; /* Extra space for footer */
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-[#F8E1B7] text-[#754E1A]">
+    <div id="main" data-scroll-container>
+        <!-- Header Section -->
+        <header class="bg-[#754E1A] text-white py-3">
+            <div class="container mx-auto flex flex-col items-center text-center md:flex-row md:justify-between md:items-center md:text-left px-4">
+                <!-- Logo -->
+                <div class="mb-1 md:mb-0">
+                    <a href="{% url 'index' %}">
+                        <img src="https://i.postimg.cc/sgbpMkLX/Black-Yellow-Thin-Interior-Design-Studio-Logo.png" alt="Pranav Interior Decorators Logo"
+                            class="w-36 h-auto md:w-48 lg:w-56">
+                    </a>
+                </div>
+                <!-- Title and Call to Action -->
+                <div class="my-9 md:ml-2 md:text-left text-center">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-3 animate__animated animate__fadeIn">Pranav Interior Decorators</h1>
+                    <p class="text-lg md:text-xl mb-6">Transforming spaces with creativity and style</p>
+                    <a href="{% url 'contact' %}" class="bg-[#F5F5DC] font-bold-600 text-black px-6 py-3 rounded-full text-xl hover:bg-[#F8E1B7] transition-all duration-300">Contact Us</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Image Gallery (Pinterest Style) -->
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6">
+            {% for image in images %}
+            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition-all">
+                <img src="{{ image.image_url }}" alt="Hosted Image" class="w-full h-auto object-cover">
+                <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent text-white text-xs md:text-sm">
+                    <p>{{ image.uploaded_at|date:"F j, Y" }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        
+        <!-- Footer -->
+        <footer class="bg-[#754E1A] text-white py-4 w-full">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2025 Pranav Interior Decorators | All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
