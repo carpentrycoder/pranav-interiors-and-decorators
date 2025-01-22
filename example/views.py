@@ -13,3 +13,4 @@ def contact(request):
 def work(request):
     images = HostedImage.objects.all()  # Fetch all the images
     return render(request, 'showcase.html', {'images': images})
+
