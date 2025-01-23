@@ -5,6 +5,66 @@
 This example shows how to use Django 4 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
 
 ## Demo
+# Pranav Interior's Website
+
+This project is the official website for Pranav Interiors, a dynamic and elegant interior design studio. The website is deployed using **Render** with cloud server storage, providing seamless performance and easy access.
+
+![Pranav Interior's Logo](https://i.postimg.cc/sgbpMkLX/Black-Yellow-Thin-Interior-Design-Studio-Logo.png)
+
+## Tech Stack
+
+- **Django**: A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- **Python**: A powerful programming language used for server-side logic.
+- **WSGI**: The Web Server Gateway Interface (WSGI) is used to communicate between the web server and the Django application.
+- **PostgreSQL**: An open-source relational database used for storing and managing data.
+- **Render**: A cloud platform used to deploy and host the website.
+- **Cloud Server Storage**: To store static files and manage assets.
+
+## Deployment Process
+
+To deploy the Pranav Interior's website to Render, follow these steps:
+
+1. **Set up the Django Project**: 
+    - Create a virtual environment and install all necessary dependencies by running:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2. **Set up PostgreSQL Database**: 
+    - Create a PostgreSQL database and configure the `DATABASES` settings in Django's `settings.py` file.
+    - Set up the necessary environment variables for the database connection, such as `DATABASE_URL` or `DATABASE_NAME`, `USER`, `PASSWORD`, and `HOST`.
+
+3. **WSGI Setup**: 
+    - Ensure that your WSGI file (`wsgi.py`) is correctly configured to interface with Render's cloud environment.
+
+4. **Prepare for Deployment**:
+    - Create a `Procfile` with the following contents:
+    ```
+    web: gunicorn your_project_name.wsgi:application
+    ```
+    - Install `gunicorn` for serving the app:
+    ```bash
+    pip install gunicorn
+    ```
+
+5. **Deploy to Render**:
+    - Connect your project repository (on GitHub, GitLab, etc.) to Render.
+    - Follow Render's steps to configure and deploy your Django app.
+    - Make sure the static and media files are properly handled by the cloud storage on Render.
+
+6. **Final Steps**:
+    - Once deployed, visit the provided URL to confirm that your website is up and running.
+    - Check logs in the Render dashboard for any errors during deployment.
+
+## Features
+
+- **Responsive Design**: The website adapts to different screen sizes for optimal user experience.
+- **Dynamic Content**: Powered by Django templates and views to render dynamic content based on the user's needs.
+- **Database Integration**: PostgreSQL manages all data related to user interactions and services.
+
+## Conclusion
+
+This project demonstrates how to build and deploy a Django application with PostgreSQL and a cloud server. It highlights modern practices in web development, cloud storage, and deployment with Render, ensuring that the Pranav Interior's website is scalable and reliable.
 
 https://django-template.vercel.app/
 
